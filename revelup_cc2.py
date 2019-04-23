@@ -9,7 +9,7 @@ import json
 
 ## 2.Retrieve the web order menu for Establishment -2 using
 
-headers = {  'API-AUTHENTICATION': '6c39370b27d0414ea095b47005b09309:4a1fb827c4954c8bb2b56d74cb085f8dfe4ea12a6cf24297824c68f3d0d843bc',    'Content-Type': 'application/json' }
+headers = {  'API-AUTHENTICATION': '**:**',    'Content-Type': 'application/json' }
 url = 'https://api-playground.revelup.com/weborders/menu/?establishment=2'
 r = requests.get(url, headers=headers)
 data=json.loads(r.text)
@@ -41,7 +41,7 @@ for z in data['data']['categories']:
 
 
 url = 'https://api-playground.revelup.com/specialresources/cart/calculate/'
-headers = {  'API-AUTHENTICATION': '6c39370b27d0414ea095b47005b09309:4a1fb827c4954c8bb2b56d74cb085f8dfe4ea12a6cf24297824c68f3d0d843bc',    'Content-Type': 'application/json' }
+headers = {  'API-AUTHENTICATION': '**:**',    'Content-Type': 'application/json' }
 data = '{"establishmentId":2,"items":[{"modifieritems":[],"special_request": "","price": 16,"product": 274,"product_name_override":"Red Sparkling","quantity": 1}],"orderInfo": {"dining_option": 0}}'
 
 r=requests.post(url, data=data, headers=headers)
